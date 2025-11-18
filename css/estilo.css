@@ -1,0 +1,152 @@
+/* 1. Reset Básico e Estilização do Body */
+body {
+    /* Define a fonte padrão */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Cor de fundo suave */
+    background-color: #f0f2f5;
+    /* Centraliza o conteúdo (login-container) na tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Ocupa a altura total da viewport */
+    height: 100vh;
+    margin: 0;
+}
+
+/* 2. Container Principal do Formulário */
+.login-container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    /* Sombra para dar profundidade */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    /* Largura máxima para desktop */
+    max-width: 380px;
+    text-align: center;
+    /* Efeito de transição na sombra e fundo */
+    transition: all 0.3s ease;
+}
+
+/* 3. Título do Formulário */
+.login-form h2 {
+    margin-bottom: 30px;
+    color: #1c1e21;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+/* 4. Grupos de Input (Label + Campo) */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #606770;
+    font-size: 0.9em;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    /* Borda sutil */
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+    box-sizing: border-box; 
+    font-size: 1em;
+    /* Efeito de foco suave */
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+    /* Destaca a borda ao focar */
+    border-color: #1877f2;
+    outline: none; /* Remove o contorno padrão do navegador */
+}
+
+/* 5. Link de Senha Esquecida */
+.forgot-password {
+    text-align: right;
+    margin-bottom: 25px;
+}
+
+.forgot-password a {
+    color: #1877f2;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: text-decoration 0.3s ease;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+/* 6. Botão Principal de Login */
+.login-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1877f2; /* Azul vibrante */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    /* Efeito de hover */
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.login-button:hover {
+    background-color: #166fe5;
+}
+
+.login-button:active {
+    /* Pequeno efeito de clique */
+    transform: translateY(1px);
+}
+
+/* 7. Link para Cadastro */
+.register-link {
+    margin-top: 30px;
+    font-size: 0.95em;
+    color: #606770;
+}
+
+.register-link a {
+    color: #1877f2;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+/* 8. Media Queries para Responsividade (Opcional, mas recomendado) */
+@media (max-width: 600px) {
+    .login-container {
+        /* Ocupa a maior parte da tela em dispositivos menores */
+        width: 90%;
+        margin: 20px;
+        padding: 30px 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* Adicione isso ao seu style.css para destacar campos com erro */
+.input-group input.input-error {
+    border-color: #dc3545; /* Vermelho para erro */
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+/* Estilo para a mensagem de erro (se você a incluir no HTML) */
+.error-message {
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #dc3545 !important;
+}
